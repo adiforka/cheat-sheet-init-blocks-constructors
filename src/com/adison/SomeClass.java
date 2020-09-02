@@ -4,6 +4,11 @@ public class SomeClass extends SomeClassParent {
 
     private final int status;
 
+    static {
+        System.out.println("1) Static initializer run");
+        SomeClass instance = new SomeClass();
+    }
+
     {
         System.out.println("3) Instance initializer run");
     }
@@ -16,11 +21,6 @@ public class SomeClass extends SomeClassParent {
     public SomeClass() {
         this(56);
         System.out.println("5) After call to 'this' in no-arg constructor");
-    }
-
-    static {
-        System.out.println("1) Static initializer run");
-        SomeClass instance = new SomeClass();
     }
 }
 
