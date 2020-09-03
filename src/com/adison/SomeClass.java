@@ -2,6 +2,8 @@ package com.adison;
 
 public class SomeClass extends SomeClassParent {
 
+    private int status;
+
     static {
         System.out.println("1) Static initializer run");
         SomeClass instance = new SomeClass();
@@ -13,6 +15,7 @@ public class SomeClass extends SomeClassParent {
 
     public SomeClass(int status) {
         System.out.println("4) One-arg constructor run");
+        this.status = status;
     }
 
     public SomeClass() {
